@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="PAPP_PjrMulta.jnlp">
+  <information>
+    <title>PAPP_PjrMulta</title>
+    <vendor>lg</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="PAPP_PjrMulta.jar" size="6251" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="PAPP_PjrMulta" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="br.edu.qi.Main"  name="PAPP_PjrMulta" />
+  <update check="always"/>
+</jnlp>

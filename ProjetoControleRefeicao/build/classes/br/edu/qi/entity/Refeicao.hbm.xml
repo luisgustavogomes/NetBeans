@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/11/2017 21:51:46 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="br.edu.qi.entity.Refeicao" table="refeicao" catalog="refeicao" optimistic-lock="version">
+        <id name="idRefeicao" type="java.lang.Integer">
+            <column name="id_refeicao" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="foto" class="br.edu.qi.entity.Foto" fetch="select">
+            <column name="id_foto" not-null="true" />
+        </many-to-one>
+        <property name="descricao" type="string">
+            <column name="descricao" length="1000" not-null="true" />
+        </property>
+        <property name="dataCadastro" type="timestamp">
+            <column name="data_cadastro" length="19" />
+        </property>
+        <set name="menus" table="menu" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_refeicao" />
+            </key>
+            <one-to-many class="br.edu.qi.entity.Menu" />
+        </set>
+    </class>
+</hibernate-mapping>

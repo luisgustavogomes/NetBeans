@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="tela" maxHeight="416.0" maxWidth="510.0" minHeight="416.0" minWidth="510.0" prefHeight="416.0" prefWidth="510.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.EmailController">
+    <children>
+        <VBox layoutX="33.0" layoutY="47.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <HBox alignment="CENTER" fillHeight="false" layoutX="33.0" layoutY="47.0">
+                    <children>
+                        <Label layoutX="40.0" layoutY="40.0" prefHeight="30.0" prefWidth="70.0" text="Remetente" />
+                        <TextField fx:id="tfEmailRemetente" editable="false" layoutX="298.0" layoutY="47.0" prefHeight="30.0" prefWidth="420.0" promptText="E-MAIL DO REMETENTE" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="33.0" layoutY="98.0">
+                    <children>
+                        <Label layoutX="40.0" layoutY="40.0" prefHeight="30.0" prefWidth="70.0" text="Senha" />
+                        <PasswordField fx:id="psSenhaRemetente" layoutX="298.0" layoutY="106.0" prefHeight="30.0" prefWidth="420.0" promptText="SENHA DO REMETENTE" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="49.0" layoutY="156.0">
+                    <children>
+                        <Label layoutX="40.0" layoutY="40.0" prefHeight="30.0" prefWidth="70.0" text="Destinatário" />
+                        <TextField fx:id="tfEmailDestinatario" layoutX="298.0" layoutY="164.0" prefHeight="30.0" prefWidth="420.0" promptText="E-MAIL DO DESTINATÁRIO" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="49.0" layoutY="222.0">
+                    <children>
+                        <Label layoutX="40.0" layoutY="40.0" prefHeight="30.0" prefWidth="70.0" text="Assunto" />
+                        <TextField fx:id="tfAssunto" layoutX="298.0" layoutY="222.0" prefHeight="30.0" prefWidth="420.0" promptText="ASSUNTO" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="49.0" layoutY="252.0">
+                    <children>
+                        <TextArea fx:id="txtAreaMsg" layoutX="49.0" layoutY="252.0" promptText="MENSAGEM" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="77.0" layoutY="344.0">
+                    <children>
+                        <Button fx:id="button" layoutX="77.0" layoutY="344.0" onAction="#enviarEmail" prefHeight="32.0" prefWidth="169.0" text="ENVIAR" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+
+    <stylesheets>
+        <URL value="@app.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" layoutX="-1.0" prefHeight="581.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.LocEditViewController">
+    <children>
+        <VBox layoutX="40.0" layoutY="7.0" spacing="20.0">
+            <children>
+                <HBox layoutX="44.0" layoutY="21.0" prefHeight="25.0" prefWidth="650.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="lbProprietario" layoutX="44.0" layoutY="25.0" prefWidth="67.0" text="Proprietario" />
+                        <TextField fx:id="txProprietario" layoutX="118.0" layoutY="21.0" prefHeight="25.0" prefWidth="369.0" />
+                        <Label fx:id="lbAno" layoutX="497.0" layoutY="25.0" text="Ano" />
+                        <TextField fx:id="txAno" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="126.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="44.0" layoutY="57.0" prefWidth="650.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="lbMarca" layoutX="44.0" layoutY="57.0" prefHeight="25.0" prefWidth="67.0" text="Marca" />
+                        <ComboBox fx:id="cbMarca" layoutX="118.0" layoutY="57.0" prefHeight="25.0" prefWidth="369.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="44.0" layoutY="94.0" prefHeight="25.0" prefWidth="650.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="lbModelo" layoutX="44.0" layoutY="98.0" prefWidth="67.0" text="Modelo" />
+                        <TextField fx:id="txModelo" layoutX="118.0" layoutY="94.0" prefHeight="25.0" prefWidth="369.0" />
+                        <Label fx:id="lbCor" layoutX="499.0" layoutY="98.0" text="Cor" />
+                        <ComboBox fx:id="cbCor" layoutX="551.0" layoutY="94.0" prefHeight="25.0" prefWidth="130.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="44.0" layoutY="131.0" prefHeight="82.0" prefWidth="650.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="lbDescricao" layoutX="44.0" layoutY="131.0" prefHeight="17.0" prefWidth="67.0" text="Descrição" />
+                        <TextArea fx:id="txDescricao" layoutX="119.0" layoutY="131.0" prefHeight="82.0" prefWidth="574.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="31.0" layoutY="232.0" prefHeight="124.0" prefWidth="650.0" spacing="60.0">
+                    <children>
+                        <VBox layoutX="31.0" layoutY="233.0" spacing="10.0">
+                            <children>
+                                <Label fx:id="lbAcessorios" layoutX="36.0" layoutY="233.0" text="Acessórios" />
+                                <VBox layoutX="31.0" layoutY="263.0" prefHeight="82.0" prefWidth="110.0" spacing="3.0">
+                                    <children>
+                                        <CheckBox fx:id="ckArCondicionado" layoutX="39.0" layoutY="264.0" mnemonicParsing="false" text="Ar Condicionado" />
+                                        <CheckBox fx:id="ckTocaFita" layoutX="39.0" layoutY="289.0" mnemonicParsing="false" text="Toca fita" />
+                                        <CheckBox fx:id="ckRodaLiga" layoutX="39.0" layoutY="315.0" mnemonicParsing="false" text="Roda Liga" />
+                                        <CheckBox fx:id="ckTapetes" layoutX="39.0" layoutY="343.0" mnemonicParsing="false" text="Tapetes" />
+                                        <CheckBox fx:id="ckAlarme" layoutX="39.0" layoutY="368.0" mnemonicParsing="false" text="Alarme" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox layoutX="189.0" layoutY="233.0" spacing="10.0">
+                            <children>
+                                <Label fx:id="lbTipo" layoutX="189.0" layoutY="233.0" text="Tipo" />
+                                <VBox layoutX="189.0" layoutY="263.0" spacing="3.0">
+                                    <children>
+                                        <RadioButton fx:id="rbUtilitario" layoutX="228.0" layoutY="265.0" mnemonicParsing="false" text="Utilitario">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="tgTipo" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton fx:id="rbPasseio" layoutX="228.0" layoutY="290.0" mnemonicParsing="false" text="Passeio" toggleGroup="$tgTipo" />
+                                        <RadioButton fx:id="rbOffRood" layoutX="228.0" layoutY="316.0" mnemonicParsing="false" text="Off Rood" toggleGroup="$tgTipo" />
+                                        <RadioButton fx:id="rbEsportivo" layoutX="228.0" layoutY="344.0" mnemonicParsing="false" text="Esportivo" toggleGroup="$tgTipo" />
+                                        <RadioButton fx:id="rbComercial" layoutX="228.0" layoutY="369.0" mnemonicParsing="false" text="Comercial" toggleGroup="$tgTipo" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox layoutX="316.0" layoutY="232.0" spacing="10.0">
+                            <children>
+                                <Label fx:id="lbEstado" layoutX="316.0" layoutY="232.0" text="Estado" />
+                                <VBox layoutX="316.0" layoutY="262.0" spacing="3.0">
+                                    <children>
+                                        <RadioButton fx:id="rbNovo" layoutX="363.0" layoutY="268.0" mnemonicParsing="false" onAction="#HandlerEstadoNovo" text="Novo">
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="tgEstado" />
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton fx:id="rbUsado" layoutX="363.0" layoutY="293.0" mnemonicParsing="false" onAction="#HaldlerEstadoUsado" text="Usado" toggleGroup="$tgEstado" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox layoutX="454.0" layoutY="244.0" prefHeight="124.0" prefWidth="179.0" spacing="10.0">
+                            <children>
+                                <HBox fx:id="hbKM" layoutX="467.0" layoutY="244.0">
+                                    <children>
+                                        <Label fx:id="lbKM" layoutX="467.0" layoutY="256.0" prefHeight="17.0" prefWidth="30.0" text="KM" />
+                                        <TextField fx:id="txKM" layoutX="514.0" layoutY="244.0" />
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="454.0" layoutY="308.0">
+                                    <children>
+                                        <Label layoutX="454.0" layoutY="312.0" prefHeight="17.0" prefWidth="30.0" text="Valor" />
+                                        <TextField fx:id="txValor" layoutX="550.0" layoutY="308.0" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <TableView fx:id="tvCarro" layoutX="28.0" layoutY="374.0" prefHeight="141.0" prefWidth="650.0">
+                    <columns>
+                        <TableColumn fx:id="proprietarioCol" prefWidth="75.0" text="Proprietario" /> 
+                        <TableColumn fx:id="modeloCol" prefWidth="75.0" text="Modelo" />
+                        <TableColumn fx:id="anoCol" prefWidth="75.0" text="Ano" />
+                        <TableColumn fx:id="estadoCol" prefWidth="75.0" text="Estado" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <HBox layoutX="28.0" layoutY="533.0" prefWidth="650.0" spacing="20.0">
+                    <children>
+                        <Button fx:id="btCadastrar" layoutX="28.0" layoutY="533.0" mnemonicParsing="false" onAction="#handlerCadastrar" prefHeight="25.0" prefWidth="74.0" text="Cadastrar" />
+                        <Button fx:id="btRemover" layoutX="149.0" layoutY="533.0" mnemonicParsing="false" onAction="#handlerRemover" prefHeight="25.0" prefWidth="74.0" text="Remover" />
+                        <Button fx:id="btConsultar" layoutX="263.0" layoutY="533.0" mnemonicParsing="false" onAction="#handlerConsultar" prefHeight="25.0" prefWidth="74.0" text="Consultar" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="656.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.CardapioController">
+    <stylesheets>
+        <URL value="@app.css" />
+    </stylesheets>
+    <children>
+        <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <VBox prefHeight="472.0" prefWidth="656.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox spacing="10.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="636.0" spacing="10.0">
+                            <children>
+                                <Label prefHeight="30.0" prefWidth="67.0" text="Data" />
+                                <DatePicker fx:id="dpData" />
+                                <Label layoutX="10.0" layoutY="10.0" prefHeight="30.0" text="Instituição" />
+                                <ComboBox fx:id="cbInstituicao" prefHeight="25.0" prefWidth="311.0" promptText="[Selecione...]" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="636.0">
+                            <children>
+                                <Label prefHeight="30.0" prefWidth="67.0" text="Refeição" />
+                                <ComboBox fx:id="cbRefeicao" prefHeight="25.0" prefWidth="568.0" promptText="[Selecione...]" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="41.0" prefHeight="124.0" prefWidth="636.0">
+                            <children>
+                                <Label prefHeight="30.0" prefWidth="67.0" text="Descrição" />
+                                <TextArea fx:id="txtDescricao" prefHeight="100.0" prefWidth="566.0" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="72.0" prefHeight="31.0" prefWidth="600.0" spacing="20.0">
+                            <children>
+                                <Button layoutX="14.0" layoutY="108.0" mnemonicParsing="false" onAction="#hendlerSalvar" prefWidth="100.0" text="Salvar" />
+                                <Button layoutX="97.0" layoutY="108.0" mnemonicParsing="false" onAction="#handlerEditar" prefWidth="100.0" text="Editar" />
+                                <Button layoutX="175.0" layoutY="108.0" mnemonicParsing="false" onAction="#handlerRemover" prefWidth="100.0" text="Remover" />
+                                <Button layoutX="245.0" layoutY="108.0" mnemonicParsing="false" onAction="#handlerCancelar" prefWidth="100.0" text="Cancelar" />
+                                <Button layoutX="245.0" layoutY="108.0" mnemonicParsing="false" onAction="#handlerEnviarEmail" prefWidth="100.0" text="E-mail" />
+                                <TextField fx:id="txtID" disable="true" editable="false" opacity="0.0" prefHeight="0.0" prefWidth="3.0" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <TableView fx:id="tvConsulta">
+                    <columns>
+                        <TableColumn fx:id="dataCol" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Data" />
+                        <TableColumn fx:id="instituicaoCol" prefWidth="308.0" text="Institução" />
+                        <TableColumn fx:id="refeicaoCol" prefWidth="75.0" text="Refeição" />
+                    </columns>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

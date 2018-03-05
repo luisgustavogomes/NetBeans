@@ -1,0 +1,2 @@
+GerenciadorUsuario;administrador;admin;admin
+GerenciadorUsuario;Luis Gomes;luis.gomes;123

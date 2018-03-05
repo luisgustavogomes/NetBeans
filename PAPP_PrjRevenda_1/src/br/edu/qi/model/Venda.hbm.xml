@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02/11/2017 10:18:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="br.edu.qi.model.Venda" table="venda" catalog="dbrevenda" optimistic-lock="version">
+        <id name="idVenda" type="java.lang.Integer">
+            <column name="id_venda" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="carro" class="br.edu.qi.model.Carro" fetch="select">
+            <column name="id_carro" />
+        </many-to-one>
+        <many-to-one name="proprietario" class="br.edu.qi.model.Proprietario" fetch="select">
+            <column name="id_proprietario" />
+        </many-to-one>
+        <property name="nro" type="int">
+            <column name="nro" not-null="true" />
+        </property>
+        <property name="dataVenda" type="date">
+            <column name="data_venda" length="10" not-null="true" />
+        </property>
+        <property name="ano" type="int">
+            <column name="ano" not-null="true" />
+        </property>
+        <property name="descricao" type="string">
+            <column name="descricao" length="1000" />
+        </property>
+        <property name="arCondicionado" type="java.lang.Byte">
+            <column name="ar_condicionado" />
+        </property>
+        <property name="tocaFita" type="java.lang.Byte">
+            <column name="toca_fita" />
+        </property>
+        <property name="rodaLiga" type="java.lang.Byte">
+            <column name="roda_liga" />
+        </property>
+        <property name="tapete" type="java.lang.Byte">
+            <column name="tapete" />
+        </property>
+        <property name="alarme" type="java.lang.Byte">
+            <column name="alarme" />
+        </property>
+        <property name="tipo" type="string">
+            <column name="tipo" length="50" not-null="true" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="50" not-null="true" />
+        </property>
+        <property name="km" type="int">
+            <column name="km" not-null="true" />
+        </property>
+        <property name="valor" type="big_decimal">
+            <column name="valor" precision="10" not-null="true" />
+        </property>
+        <property name="numeroParcela" type="int">
+            <column name="numero_parcela" not-null="true" />
+        </property>
+        <set name="pagamentos" table="pagamento" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_venda" />
+            </key>
+            <one-to-many class="br.edu.qi.model.Pagamento" />
+        </set>
+    </class>
+</hibernate-mapping>

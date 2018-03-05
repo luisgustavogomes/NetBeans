@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="348.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.FuncEditController">
+    <children>
+        <GridPane layoutX="21.0" layoutY="23.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="151.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="209.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="lbMatricula" text="Matricula" />
+                <Label fx:id="lbNome" text="Nome" GridPane.rowIndex="1" />
+                <Label text="Cargo" GridPane.rowIndex="5" />
+                <Label fx:id="lbEndereco" text="Endereço" GridPane.rowIndex="2" />
+                <Label fx:id="lbSexo" text="Sexo" GridPane.rowIndex="3" />
+                <Label fx:id="lbSalario" text="Salário" GridPane.rowIndex="6" />
+                <Label text="Quinquênio" GridPane.rowIndex="7" />
+                <TextField fx:id="txMatricula" GridPane.columnIndex="1" />
+                <TextField fx:id="txNome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="txEndereco" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="txSalario" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <TextField fx:id="txQuinquenio" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <ComboBox fx:id="cbCargo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <RadioButton fx:id="rbM" mnemonicParsing="false" text="Masculino" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="grSexo" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="rbF" mnemonicParsing="false" text="Feminino" toggleGroup="$grSexo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <CheckBox fx:id="ckGerente" mnemonicParsing="false" text="Sim" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label fx:id="lbGerente" text="Gerente" GridPane.rowIndex="8" />
+            </children>
+        </GridPane>
+        <Button fx:id="btGravar" layoutX="176.0" layoutY="309.0" mnemonicParsing="false" onAction="#handBtGravar" text="Gravar" />
+    </children>
+</AnchorPane>

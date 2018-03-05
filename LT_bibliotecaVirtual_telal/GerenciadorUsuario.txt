@@ -1,0 +1,3 @@
+GerenciadorUsuario;administrador;admin;123
+GerenciadorUsuario;luis;luis;123
+GerenciadorUsuario;administrador;admin;admin

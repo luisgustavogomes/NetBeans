@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/11/2017 21:51:46 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="br.edu.qi.entity.Foto" table="foto" catalog="refeicao" optimistic-lock="version">
+        <id name="idFoto" type="java.lang.Integer">
+            <column name="id_foto" />
+            <generator class="identity" />
+        </id>
+        <property name="image" type="binary">
+            <column name="image" not-null="true" />
+        </property>
+        <set name="refeicaos" table="refeicao" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_foto" not-null="true" />
+            </key>
+            <one-to-many class="br.edu.qi.entity.Refeicao" />
+        </set>
+    </class>
+</hibernate-mapping>

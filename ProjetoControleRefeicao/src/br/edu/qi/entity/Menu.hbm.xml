@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/11/2017 21:51:46 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="br.edu.qi.entity.Menu" table="menu" catalog="refeicao" optimistic-lock="version">
+        <id name="idMenu" type="java.lang.Integer">
+            <column name="id_menu" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="instituicao" class="br.edu.qi.entity.Instituicao" fetch="select">
+            <column name="id_instituicao" />
+        </many-to-one>
+        <many-to-one name="refeicao" class="br.edu.qi.entity.Refeicao" fetch="select">
+            <column name="id_refeicao" />
+        </many-to-one>
+        <property name="dataCarpadio" type="timestamp">
+            <column name="data_carpadio" length="19" not-null="true" />
+        </property>
+        <property name="descricao" type="string">
+            <column name="descricao" length="1000" />
+        </property>
+    </class>
+</hibernate-mapping>

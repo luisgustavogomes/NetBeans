@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02/11/2017 10:18:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="br.edu.qi.model.Proprietario" table="proprietario" catalog="dbrevenda" optimistic-lock="version">
+        <id name="idProprietario" type="java.lang.Integer">
+            <column name="id_proprietario" />
+            <generator class="identity" />
+        </id>
+        <property name="nome" type="string">
+            <column name="nome" length="100" not-null="true" />
+        </property>
+        <property name="endereco" type="string">
+            <column name="endereco" length="100" not-null="true" />
+        </property>
+        <property name="numero" type="string">
+            <column name="numero" length="10" not-null="true" />
+        </property>
+        <property name="bairro" type="string">
+            <column name="bairro" length="100" not-null="true" />
+        </property>
+        <property name="cidade" type="string">
+            <column name="cidade" length="100" not-null="true" />
+        </property>
+        <property name="pais" type="string">
+            <column name="pais" length="100" not-null="true" />
+        </property>
+        <property name="telefone" type="string">
+            <column name="telefone" length="15" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="100" not-null="true" />
+        </property>
+        <set name="vendas" table="venda" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_proprietario" />
+            </key>
+            <one-to-many class="br.edu.qi.model.Venda" />
+        </set>
+    </class>
+</hibernate-mapping>

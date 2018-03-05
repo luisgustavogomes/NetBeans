@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="PAPP_PjrControladorMultas.jnlp">
+  <information>
+    <title>PAPP_PjrControladorMultas</title>
+    <vendor>lg</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="PAPP_PjrControladorMultas.jar" size="10369" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="PAPP_PjrControladorMultas" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="br.edu.qi.MainApp"  name="PAPP_PjrControladorMultas" />
+  <update check="always"/>
+</jnlp>

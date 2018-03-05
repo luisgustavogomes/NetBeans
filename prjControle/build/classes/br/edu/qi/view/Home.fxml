@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.HomeController">
+    <stylesheets>
+        <URL value="@app.css" />
+    </stylesheets>
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <VBox prefHeight="400.0" prefWidth="201.0" spacing="20.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="102.0" prefWidth="181.0" stylesheets="@app.css" text="Menu" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="17.0" prefWidth="181.0">
+                            <children>
+                                <Button fx:id="btnCardapio" ellipsisString="Informações" mnemonicParsing="false" onAction="#handlerCardapio" prefHeight="32.0" prefWidth="250.0" text="Cardápio" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="17.0" prefWidth="181.0">
+                            <children>
+                                <Button fx:id="btnInstituicao" mnemonicParsing="false" onAction="#handlerInstituicao" prefHeight="32.0" prefWidth="250.0" text="Instituição" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="9.0" prefWidth="181.0">
+                            <children>
+                                <Button fx:id="btnPessoa" mnemonicParsing="false" onAction="#handlerPessoa" prefHeight="32.0" prefWidth="250.0" text="Pessoa" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="9.0" prefWidth="181.0">
+                            <children>
+                                <Button fx:id="btnRefeicao" mnemonicParsing="false" onAction="#handlerRefeicao" prefHeight="32.0" prefWidth="250.0" text="Refeição" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="9.0" prefWidth="181.0">
+                            <children>
+                                <Button fx:id="btnConfiguracao" mnemonicParsing="false" onAction="#handlerConfiguracao" prefHeight="32.0" prefWidth="250.0" text="Configuração" />
+                            </children>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </VBox>
+            </left>
+            <center>
+                <TabPane fx:id="tabPane" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER" />
+            </center>
+            <bottom>
+                <HBox prefHeight="30.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="463.0" text="Data/Hora" textAlignment="RIGHT">
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblHorario" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="537.0">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

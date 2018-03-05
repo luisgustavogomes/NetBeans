@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="462.0" prefWidth="504.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.EditViewController">
+    <children>
+        <Label layoutX="22.0" layoutY="11.0" prefHeight="20.0" prefWidth="180.0" text="Nro Placa" />
+        <TextField fx:id="txtNroPlaca" layoutX="98.0" layoutY="8.0" />
+        <Label layoutX="44.0" layoutY="33.0" prefHeight="20.0" prefWidth="180.0" text="Data" />
+        <TextField fx:id="txtData" layoutX="159.0" layoutY="34.0" />
+        <Label layoutX="38.0" layoutY="61.0" prefHeight="20.0" prefWidth="180.0" text="Horario" />
+        <TextField fx:id="txtHorario" layoutX="115.0" layoutY="59.0" />
+        <Label layoutX="20.0" layoutY="96.0" prefHeight="20.0" prefWidth="180.0" text="Local" />
+        <TextField fx:id="txtLocal" layoutX="88.0" layoutY="94.0" />
+        <Label layoutX="88.0" layoutY="262.0" prefHeight="20.0" prefWidth="180.0" text="Velocidade Permitida" />
+        <TextField fx:id="txtVelocidadePermitida" layoutX="275.0" layoutY="260.0" />
+        <Label layoutX="102.0" layoutY="294.0" prefHeight="20.0" prefWidth="180.0" text="Velocidade do Veículo" />
+        <TextField fx:id="txtVelocidadeVeiculo" layoutX="275.0" layoutY="292.0" />
+        <Label layoutX="156.0" layoutY="336.0" prefHeight="20.0" prefWidth="180.0" text="Valor à pagar" />
+        <TextField fx:id="txtValorApagar" layoutX="246.0" layoutY="333.0" />
+      
+        <Button fx:id="btnGravar" layoutX="370.0" layoutY="41.0" mnemonicParsing="false" onAction="#handlerBtGravar" text="Gravar" />
+    </children>
+</AnchorPane>

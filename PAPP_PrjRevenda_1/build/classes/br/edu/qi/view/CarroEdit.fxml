@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@app.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.CarroEditController">
+    <children>
+        <TextField fx:id="txtID" editable="false" prefHeight="25.0" prefWidth="24.0" visible="false" />
+        <VBox layoutX="44.0" layoutY="32.0" spacing="20.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="32.0">
+            <children>
+                <HBox layoutX="41.0" layoutY="34.0" prefWidth="513.0" spacing="10.0">
+                    <children>
+                        <Label layoutX="41.0" layoutY="38.0" prefHeight="17.0" prefWidth="48.0" text="Modelo" />
+                        <ComboBox fx:id="cbModelo" layoutX="88.0" layoutY="34.0" prefHeight="25.0" prefWidth="456.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="41.0" layoutY="81.0" prefWidth="513.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="lblMarca" layoutX="41.0" layoutY="85.0" prefWidth="48.0" text="Marca" />
+                        <ComboBox fx:id="cbMarca" layoutX="88.0" layoutY="81.0" prefHeight="25.0" prefWidth="458.0" />
+                    </children>
+                </HBox>
+                
+                <HBox layoutX="39.0" layoutY="136.0" spacing="20.0">
+                    <children>
+                        <Button fx:id="btnSalvar" layoutX="41.0" layoutY="137.0" mnemonicParsing="false" onAction="#HandlerSalvar" prefHeight="27.0" prefWidth="100.0" text="Salvar" />
+                        <Button fx:id="btnRemover" layoutX="111.0" layoutY="137.0" mnemonicParsing="false" onAction="#HandlerRemover" prefHeight="27.0" prefWidth="100.0" text="Remover" />
+                        <Button fx:id="btnEditar" layoutX="111.0" layoutY="137.0" mnemonicParsing="false" onAction="#HandlerEditar" prefHeight="27.0" prefWidth="100.0" text="Editar" />
+                        <Button fx:id="btnCancelar" layoutX="111.0" layoutY="137.0" mnemonicParsing="false" onAction="#HandlerCancelar" prefHeight="27.0" prefWidth="100.0" text="Cancelar" />
+                    </children>
+                </HBox>
+                <TableView fx:id="tvConsulta" layoutX="41.0" layoutY="177.0" prefHeight="200.0" prefWidth="513.0">
+                    <columns>
+                        <TableColumn fx:id="idCol" maxWidth="88.0" minWidth="88.0" prefWidth="88.0" resizable="false" text="ID" />
+                        <TableColumn fx:id="modeloCol" maxWidth="500.0" minWidth="200.0" prefWidth="228.0" text="MODELO" />
+                        <TableColumn fx:id="marcaCol" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="195.0" text="MARCA" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

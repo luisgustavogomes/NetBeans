@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02/11/2017 10:18:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="br.edu.qi.model.Carro" table="carro" catalog="dbrevenda" optimistic-lock="version">
+        <id name="idCarro" type="java.lang.Integer">
+            <column name="id_carro" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="marca" class="br.edu.qi.model.Marca" fetch="select">
+            <column name="id_marca" />
+        </many-to-one>
+        <many-to-one name="modelo" class="br.edu.qi.model.Modelo" fetch="select">
+            <column name="id_modelo" />
+        </many-to-one>
+        <set name="vendas" table="venda" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="carro" not-null="true" />
+                <!--id_carro-->
+            </key>
+            <one-to-many class="br.edu.qi.model.Venda" />
+        </set>
+    </class>
+</hibernate-mapping>

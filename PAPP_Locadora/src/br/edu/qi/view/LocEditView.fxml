@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.LocEditViewController">
+    <children>
+        <Label fx:id="lbNroLocacao" layoutX="50.0" layoutY="38.0" text="nroLocação" />
+        <TextField fx:id="txNroLocacao" layoutX="124.0" layoutY="34.0" />
+        <Label fx:id="lbVeiculo" layoutX="50.0" layoutY="71.0" text="Veiculo" />
+        <ComboBox fx:id="cbVeiculo" layoutX="124.0" layoutY="67.0" onAction="#handVeiculoSelected" prefHeight="25.0" prefWidth="380.0" />
+        <Label fx:id="lbValor" layoutX="51.0" layoutY="109.0" text="Valor" />
+        <Label fx:id="lbMulta" layoutX="51.0" layoutY="144.0" text="Multa" />
+        <Label layoutX="259.0" layoutY="144.0" text="Qtde dias atraso" />
+        <Label layoutX="259.0" layoutY="109.0" text="Qtde dias" />
+        <TextField fx:id="txValor" editable="false" layoutX="90.0" layoutY="105.0" />
+        <TextField fx:id="txMulta" layoutX="90.0" layoutY="140.0" />
+        <TextField fx:id="txQtdeDias" layoutX="356.0" layoutY="105.0" />
+        <TextField fx:id="txQtdeDiasAtraso" layoutX="356.0" layoutY="140.0" />
+        <Label fx:id="lbAvista" layoutX="50.0" layoutY="183.0" text="À vista" />
+        <CheckBox fx:id="ckAvista" layoutX="102.0" layoutY="183.0" mnemonicParsing="false" />
+        <Button fx:id="btCalcular" layoutX="165.0" layoutY="179.0" mnemonicParsing="false" onAction="#handCalcular" prefHeight="25.0" prefWidth="62.0" text="Calcular" />
+        <TextField fx:id="txTotal" editable="false" layoutX="356.0" layoutY="179.0" />
+        <Label fx:id="lbTotal" layoutX="263.0" layoutY="183.0" text="Total" />
+        <Button fx:id="btSalvar" layoutX="51.0" layoutY="227.0" mnemonicParsing="false" onAction="#handSalvar" prefHeight="25.0" prefWidth="100.0" text="Salvar" />
+        <TableView fx:id="tvLocacao" layoutX="68.0" layoutY="274.0" prefHeight="277.0" prefWidth="647.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="274.0">
+            <columns>
+                <TableColumn fx:id="nroLocacaoCol" prefWidth="101.0" text="Nro Locação" />
+                <TableColumn fx:id="veiculoCol" prefWidth="74.0" text="Veiculo" />
+                <TableColumn fx:id="valorCol" prefWidth="88.0" text="Valor" />
+                <TableColumn fx:id="qtdeDiasCol" prefWidth="67.0" text="Qtde dias" />
+                <TableColumn fx:id="multaCol" prefWidth="99.0" text="Multa" />
+                <TableColumn fx:id="qtdeDiasAtrasadoCol" prefWidth="117.0" text="Qtde Dias Atrasado" />
+                <TableColumn fx:id="avistaCol" prefWidth="44.0" text="Avista" />
+                <TableColumn fx:id="totalCol" prefWidth="102.0" text="Total" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+      <Button fx:id="btLimpar" layoutX="172.0" layoutY="227.0" mnemonicParsing="false" onAction="#handLimpar" prefHeight="25.0" prefWidth="100.0" text="Limpar" />
+      <Button fx:id="btRemover" layoutX="289.0" layoutY="227.0" mnemonicParsing="false" onAction="#handRemover" prefHeight="25.0" prefWidth="100.0" text="Remover" />
+      <Button fx:id="btAtualizar" layoutX="404.0" layoutY="227.0" mnemonicParsing="false" onAction="#handAtualizar" prefHeight="25.0" prefWidth="100.0" text="Atualizar" />
+    </children>
+</AnchorPane>

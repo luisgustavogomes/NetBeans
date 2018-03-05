@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="383.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.qi.controller.CadEditViewController">
+   <children>
+      <VBox layoutX="54.0" layoutY="30.0" spacing="20.0" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <HBox layoutX="13.0" layoutY="80.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="154.0" text="Nro. Placa" />
+                  <TextField fx:id="txtNroPlaca" />
+               </children>
+            </HBox>
+            <HBox layoutX="13.0" layoutY="118.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="154.0" text="Data" />
+                  <TextField fx:id="txtData" />
+               </children>
+            </HBox>
+            <HBox layoutX="13.0" layoutY="163.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="154.0" text="Horário" />
+                  <TextField fx:id="txtHorario" />
+               </children>
+            </HBox>
+            <HBox layoutX="19.0" layoutY="200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="154.0" text="Local" />
+                  <TextField fx:id="txtLocal" />
+               </children>
+            </HBox>
+            <HBox layoutX="19.0" layoutY="260.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="154.0" text="Velocidade Permitida [KM]" />
+                  <TextField fx:id="txtVelocidadePermitidaKM" />
+               </children>
+            </HBox>
+            <HBox layoutX="16.0" layoutY="296.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="154.0" text="Velocidade do Veículo [KM]" />
+                  <TextField fx:id="txtVelocidadeVeiculoKM" />
+               </children>
+            </HBox>
+            <HBox layoutX="63.0" layoutY="339.0" />
+         </children>
+      </VBox>
+      <Button fx:id="btnGravar" layoutX="232.0" layoutY="344.0" mnemonicParsing="false" onAction="#handlerBtGravar" prefHeight="25.0" prefWidth="73.0" text="Gravar" />
+   </children>
+</AnchorPane>

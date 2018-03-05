@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02/11/2017 10:18:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="br.edu.qi.model.Pagamento" table="pagamento" catalog="dbrevenda" optimistic-lock="version">
+        <id name="idPagamento" type="java.lang.Integer">
+            <column name="id_pagamento" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="venda" class="br.edu.qi.model.Venda" fetch="select">
+            <column name="id_venda" />
+        </many-to-one>
+        <property name="nroPagamento" type="string">
+            <column name="nro_pagamento" length="10" not-null="true" />
+        </property>
+        <property name="dataVencimento" type="date">
+            <column name="data_vencimento" length="10" not-null="true" />
+        </property>
+        <property name="dataPagamento" type="date">
+            <column name="data_pagamento" length="10" />
+        </property>
+        <property name="multa" type="big_decimal">
+            <column name="multa" precision="10" />
+        </property>
+        <property name="valorLiquido" type="big_decimal">
+            <column name="valor_liquido" precision="10" />
+        </property>
+        <property name="liquidacao" type="java.lang.Byte">
+            <column name="liquidacao" />
+        </property>
+    </class>
+</hibernate-mapping>
